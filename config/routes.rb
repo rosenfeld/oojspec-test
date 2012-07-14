@@ -1,4 +1,7 @@
+require 'rails-sandbox-assets'
+
 OojspecTest::Application.routes.draw do
+  root to: SandboxAssets::Engine
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
