@@ -1,4 +1,4 @@
-# oojspec example application
+# [oojspec](https://github.com/rosenfeld/oojspec) example application
 
 Run `bundle; rake sandbox_assets:serve` and navigate to http://localhost:5000.
 
