@@ -27,6 +27,7 @@ oojspec.describe "First spec", ->
     @describe "describe shouldn't be available here"
 
   expectedTimeouts++
+  expectedFailures++
   @it 'times out', ->
     @waitsFor "waiting for false - will never run", 30, -> false
     @runs -> throw "Should never get here"
