@@ -1,6 +1,5 @@
-expectedContexts = expectedFailures = expectedErrors = expectedTimeouts = 0
+expectedFailures = expectedErrors = expectedTimeouts = 0
 
-expectedContexts++
 oojspec.describe "First spec", ->
   b1 = b2 = a1 = a2 = 0
   @before -> ++b1
@@ -18,10 +17,8 @@ oojspec.describe "First spec", ->
     throw 'should never be executed'
     @assert true
 
-  expectedContexts++
   @describe 'inner describe', -> @it 'passes', -> @assert true
 
-  expectedContexts++
   expectedErrors++
   @context 'inner context', -> @it 'throws', ->
     @describe "describe shouldn't be available here"
@@ -48,4 +45,6 @@ oojspec.describe "First spec", ->
     @expect(oojspec.stats.failures).toBe expectedFailures
     @expect(oojspec.stats.errors).toBe expectedErrors
     @expect(oojspec.stats.timeouts).toBe expectedTimeouts
-    @expect(oojspec.stats.contexts).toBe expectedContexts
+    # top-level describes: 'First spec', 'Second context', 'After all description',
+    # 'Bare class' and 'JavaScript-like with binding'
+    @expect(oojspec.stats.contexts).toBe 5
