@@ -19,8 +19,8 @@ gem 'rails', '3.2.6'
   #gem 'uglifier', '>= 1.0.3'
 #end
 
-gem 'oojspec'#, path: '../oojspec'
-#gem 'oojspec', github: 'rosenfeld/oojspec'
+#gem 'oojspec', path: '../oojspec'
+gem 'oojspec', github: 'rosenfeld/oojspec', submodules: true
 
 #gem 'jquery-rails'
 
