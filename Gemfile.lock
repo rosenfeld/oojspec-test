@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/rosenfeld/oojspec.git
-  revision: a60f776696cfc19122a1de30679a861307a4e712
+  revision: d86e3fa1f323eae5602867fc18a81069dc39d943
   submodules: true
   specs:
     oojspec (0.0.6)
