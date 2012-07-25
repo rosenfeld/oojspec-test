@@ -43,3 +43,17 @@ plain =
   sampleExample: -> this.assert(this.dialog.dialog)
 
 describe plain
+
+# or just use "this" in a regular describe, although not much useful:
+
+describe "Regular describe and OO", ->
+  @example "'this' is propagated", ->
+    @expect(@helper()).toBe 1
+  @helper = -> 1
+
+describe "Regular describe and OO with bare set up", ->
+  @bare = true
+  @timeout = 100
+  @example "'this' is propagated but DSL is not injected", (s)->
+    s.expect(@timeout).toBe 100
+    s.refute @expect

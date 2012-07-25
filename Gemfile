@@ -20,7 +20,7 @@ gem 'rails', '3.2.6'
 #end
 
 #gem 'oojspec', path: '../oojspec'
-gem 'oojspec', github: 'rosenfeld/oojspec', submodules: true
+gem 'oojspec'#, github: 'rosenfeld/oojspec', submodules: true
 
 #gem 'jquery-rails'
 
