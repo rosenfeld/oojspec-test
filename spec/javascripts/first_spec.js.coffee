@@ -15,7 +15,6 @@ oojspec.describe "First spec", ->
   @example 'fail with one assertion', ->
     @assert false
     throw 'should never be executed'
-    @assert true
 
   @describe 'inner describe', -> @it 'passes', -> @assert true
 
