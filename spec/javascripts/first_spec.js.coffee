@@ -46,5 +46,6 @@ oojspec.describe "First spec", ->
     @expect(oojspec.stats.errors).toBe expectedErrors
     @expect(oojspec.stats.timeouts).toBe expectedTimeouts
     # top-level describes: 'First spec', 'Second context', 'After all description',
-    # 'Bare class' and 'JavaScript-like with binding'
-    @expect(oojspec.stats.contexts).toBe 5
+    # 'Bare class', 'JavaScript-like with binding', 'Regular describe and OO' and
+    # 'Regular describe and OO with bare set up'
+    @expect(oojspec.stats.contexts).toBe 7
