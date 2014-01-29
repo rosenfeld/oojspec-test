@@ -41,10 +41,10 @@ oojspec.describe "First spec", ->
     @expect(a2).toBe 6
 
   @specify "this should be the last test and pass", ->
-    @expect(oojspec.stats.failures).toBe expectedFailures
-    @expect(oojspec.stats.errors).toBe expectedErrors
-    @expect(oojspec.stats.timeouts).toBe expectedTimeouts
+    @expect(parent.oojspec.stats.failures).toBe expectedFailures
+    @expect(parent.oojspec.stats.errors).toBe expectedErrors
+    @expect(parent.oojspec.stats.timeouts).toBe expectedTimeouts
     # top-level describes: 'First spec', 'Second context', 'After all description',
     # 'Bare class', 'JavaScript-like with binding', 'Regular describe and OO' and
     # 'Regular describe and OO with bare set up'
-    @expect(oojspec.stats.contexts).toBe 7
+    @expect(parent.oojspec.stats.contexts).toBe 7

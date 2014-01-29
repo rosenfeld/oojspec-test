@@ -6,6 +6,7 @@ OojspecTest::Application.configure do
   # your test database is "scratch space" for the test suite and is wiped
   # and recreated between test runs. Don't rely on the data there!
   config.cache_classes = true
+  config.eager_load = false
 
   # Configure static asset server for tests with Cache-Control for performance
   config.serve_static_assets = true
@@ -27,7 +28,7 @@ OojspecTest::Application.configure do
   # Tell Action Mailer not to deliver emails to the real world.
   # The :test delivery method accumulates sent emails in the
   # ActionMailer::Base.deliveries array.
-  config.action_mailer.delivery_method = :test
+  #config.action_mailer.delivery_method = :test
 
 
   # Print deprecation notices to the stderr

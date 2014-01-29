@@ -3,8 +3,6 @@ require File.expand_path('../boot', __FILE__)
 # Pick the frameworks you want:
 # require "active_record/railtie"
 require "action_controller/railtie"
-require "action_mailer/railtie"
-require "active_resource/railtie"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
@@ -66,5 +64,6 @@ module OojspecTest
     config.assets.version = '1.0'
 
     config.sandbox_assets.template = 'oojspec/runner'
+    config.sandbox_assets.iframe_template = 'oojspec/iframe'
   end
 end

@@ -1,5 +1,5 @@
 OojspecTest::Application.routes.draw do
-  root to: SandboxAssets::Engine
+  mount SandboxAssets::Engine => '/'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
