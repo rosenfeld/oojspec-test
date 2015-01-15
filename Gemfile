@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.2'
-gem 'oojspec'#, github: 'rosenfeld/oojspec', submodules: true
+gem 'railties', '4.2.0'
+gem 'sprockets-rails'
+gem 'oojspec', github: 'rosenfeld/oojspec', submodules: true
+#gem 'oojspec', path: '../oojspec'

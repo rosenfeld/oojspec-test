@@ -16,7 +16,14 @@ oojspec.describe "First spec", ->
     @assert false
     throw 'should never be executed'
 
-  @describe 'inner describe', -> @it 'passes', -> @assert true
+  @describe 'inner describe', ->
+    @before -> @beforeTest = b1 + 2
+    @specify 'first inner example', ->
+      @expect(b1).toBe 3
+      @expect(@beforeTest).toBe 5
+    @specify 'second inner example', ->
+      @expect(b1).toBe 4
+      @expect(@beforeTest).toBe 6
 
   expectedErrors++
   @context 'inner context', -> @it 'throws', ->
@@ -35,10 +42,10 @@ oojspec.describe "First spec", ->
     @runs -> @assert true
 
   @specify "before and after work", ->
-    @expect(b1).toBe 7
-    @expect(b2).toBe 7
-    @expect(a1).toBe 6
-    @expect(a2).toBe 6
+    @expect(b1).toBe 8
+    @expect(b2).toBe 8
+    @expect(a1).toBe 7
+    @expect(a2).toBe 7
 
   @specify "this should be the last test and pass", ->
     @expect(parent.oojspec.stats.failures).toBe expectedFailures
