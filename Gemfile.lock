@@ -1,6 +1,6 @@
 GIT
-  remote: git://github.com/rosenfeld/oojspec.git
-  revision: 647ff1577b0765ade19df0408a09da4363406cac
+  remote: https://github.com/rosenfeld/oojspec.git
+  revision: d31720832400dc42777b23298aa46eefdc10df61
   submodules: true
   specs:
     oojspec (0.3.0)
@@ -30,17 +30,19 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     builder (3.2.2)
-    coffee-rails (4.1.0)
+    coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
-      railties (>= 4.0.0, < 5.0)
-    coffee-script (2.3.0)
+      railties (>= 4.0.0)
+    coffee-script (2.4.1)
       coffee-script-source
       execjs
-    coffee-script-source (1.8.0)
+    coffee-script-source (1.12.2)
+    concurrent-ruby (1.1.10)
     erubis (2.7.0)
-    execjs (2.2.2)
+    execjs (2.8.1)
     hike (1.2.3)
-    i18n (0.7.0)
+    i18n (0.9.5)
+      concurrent-ruby (~> 1.0)
     json (1.8.1)
     loofah (2.0.1)
       nokogiri (>= 1.5.9)
